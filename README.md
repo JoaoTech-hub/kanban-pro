@@ -90,15 +90,17 @@ Aplicação full stack de gerenciamento de tarefas no estilo Kanban, com autenti
 
 ## 🏗️ Arquitetura
 
+```text
 ┌──────────────┐        HTTPS/JSON        ┌──────────────────┐
 │   Frontend   │ ───────────────────────▶ │      Backend      │
 │  React (SPA) │ ◀─────────────────────── │  Express (REST)   │
 └──────────────┘        JWT Bearer        └──────────────────┘
-│
-▼
+          │
+          ▼
 ┌──────────────────┐
-│  SQLite (arquivo) │
+│ SQLite (arquivo) │
 └──────────────────┘
+```
 
 O backend segue arquitetura em camadas, para manter regra de negócio, validação e acesso a dados desacoplados:
 
